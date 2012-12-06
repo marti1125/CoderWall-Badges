@@ -4,3 +4,5 @@
 ![Screenshot of CoderWall-Badges](http://marti1125.github.com/CoderWall-Badges/and2.png "splash")
 ![Screenshot of CoderWall-Badges](http://nsinopoli.github.com/CoderWall-Badges/and3.png "splash")
 
+![Splash](https://raw.github.com/marti1125/CoderWall-Badges/master/and1.png "Splash")
+
