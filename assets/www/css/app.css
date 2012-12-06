@@ -1,0 +1,3 @@
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
