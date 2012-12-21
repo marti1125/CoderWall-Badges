@@ -11,6 +11,7 @@
 	<script src="js/cordova-2.2.0.js"></script>
 	<script src="js/iscroll.js"></script>
 	<script src="js/jquery.mobile.iscrollview.js"></script>
+	<script src="js/heartcode-canvasloader.js"></script>
 	<script src="js/app.js"></script>
 	<script type="text/javascript">
 	$( document ).bind( "mobileinit", function() {
@@ -26,6 +27,11 @@
 		padding: 15px;
 		border-radius: 10px;
 	}
+	.wrapper {
+		position:absolute;
+		top:50%;
+		left:50%;
+	}
 	</style>
 </head> 
 <body> 
@@ -39,7 +45,7 @@
 	<div data-role="content">			
 		<label for="search-basic"><h2>Enter your username</h2></label>
 		<input type="search" name="search" id="search-basic" value="" />
-		<a rel="external" href="#" data-transition="slide" data-role="button" id="btnsearch">Search</a>		
+		<a rel="external" href="#pagerest" data-transition="slide" data-role="button" id="btnsearch">Search</a>		
 	</div><!-- /content -->
 
 </div><!-- /page -->
@@ -52,8 +58,9 @@
 	</div><!-- /header -->
 	
 	<div data-role="content" data-iscroll class="iscroll-wrapper">
-        <div class="iscroll-scroller">        
-	        <div class="iscroll-content"> 
+        <div class="iscroll-scroller">       
+	        <div class="iscroll-content">
+	        <div id="canvasloader-container" class="wrapper"></div>	        
 	        <div id="result"></div>
 			<br/><br/>				
 			<ul id="badges" data-role="listview" data-split-icon="gear" data-split-theme="a">
@@ -63,6 +70,16 @@
     </div><!-- /content -->	
 
 </div><!-- /page -->
+
+<script type="text/javascript">
+     var cl = new CanvasLoader('canvasloader-container');
+     cl.show();
+
+     var loaderObj = document.getElementById("canvasLoader");
+     loaderObj.style.position = "absolute";
+     loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
+     loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
+</script>
 
 </body>
 </html>

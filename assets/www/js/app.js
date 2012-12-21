@@ -1,7 +1,8 @@
 $('#btnsearch').live('click', function () {
 
-	$("#result").html('');
+	$("#result").hide();
 	$("#badges").html('');
+
 
 	var search = $("#search-basic").val();
 
@@ -11,7 +12,9 @@ $('#btnsearch').live('click', function () {
 	    timeout: 10000,
 	    success: function (data) {
 
-	        $.mobile.changePage($("#pagerest"), { transition: "slide"});
+	        //$.mobile.changePage($("#pagerest"), { transition: "slide"});
+	        $('.wrapper').hide();
+	        $("#result").show();
 
 	        $.each(data, function (key, val) {
 
