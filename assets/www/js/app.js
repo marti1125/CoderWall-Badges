@@ -1,8 +1,7 @@
 $('#btnsearch').live('click', function () {
 
 	$("#result").hide();
-	$("#badges").html('');
-
+	$("#badges").html('');		
 
 	var search = $("#search-basic").val();
 
@@ -10,9 +9,10 @@ $('#btnsearch').live('click', function () {
 	    url: 'https://coderwall.com/' + search + '.json?callback=?',
 	    dataType: "json",
 	    timeout: 10000,
-	    success: function (data) {
+	    success: function (data) {	    	
 
-	        //$.mobile.changePage($("#pagerest"), { transition: "slide"});
+	        $.mobile.changePage($("#pagerest"), { transition: "slide"});
+	        
 	        $('.wrapper').hide();
 	        $("#result").show();
 
@@ -23,8 +23,7 @@ $('#btnsearch').live('click', function () {
 	            var location = val.location;
 	            var github = val.accounts.github;
 	            $('#result').append('<h2>' + name + '</h2>');
-	            $('#result').append('<h3>' + location + '</h3>');
-	            //$('#result').append('<p>Github account: <a class=ui-link rel=external target=_blank href=https://github.com/' + github + ' target=_blank>' + github + '</a></p><br/>');
+	            $('#result').append('<h3>' + location + '</h3>');	            
 
 	            $.each(val.badges, function (key2, val2) {
 	                var badge_name = val2.name;
@@ -37,9 +36,9 @@ $('#btnsearch').live('click', function () {
 
 	        });
 	    },
-	    error: function (data) {
+	    error: function (data) {	    	
 	        alert('Username does not found');
 	    }
-	});    
+	});  
 
 });

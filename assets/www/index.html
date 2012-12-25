@@ -16,8 +16,7 @@
 	<script type="text/javascript">
 	$( document ).bind( "mobileinit", function() {
     	//$.mobile.allowCrossDomainPages = true;
-    	$.mobile.defaultPageTransition = 'slide';
-    	
+    	$.mobile.defaultPageTransition = 'slide';    	
     	//$.mobile.ajaxEnabled=true;
 	});
 	</script>
@@ -45,7 +44,7 @@
 	<div data-role="content">			
 		<label for="search-basic"><h2>Enter your username</h2></label>
 		<input type="search" name="search" id="search-basic" value="" />
-		<a rel="external" href="#pagerest" data-transition="slide" data-role="button" id="btnsearch">Search</a>		
+		<a rel="external" href="" data-transition="slide" data-role="button" id="btnsearch">Search</a>		
 	</div><!-- /content -->
 
 </div><!-- /page -->
@@ -53,7 +52,7 @@
 <div data-role="page" id="pagerest">
 
 	<div data-role="header" data-position="fixed" data-tap-toggle="false" >
-		<a href="#" data-rel="back" data-transition="slide" >Back</a>
+		<a href="#pagerest" data-rel="back" data-transition="slide" >Back</a>
 		<h1>CoderWall</h1>
 	</div><!-- /header -->
 	

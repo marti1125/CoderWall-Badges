@@ -1,8 +1,10 @@
-# CoderWall Badges Viewer v1.3
+# CoderWall Badges Viewer v1.4
 
 * Author: Willy Aguirre
 * Email: marti1125@gmail.com
 * Android version minimum: 2.2
+
+[![endorse](http://api.coderwall.com/marti1125/endorsecount.png)](http://coderwall.com/marti1125)
 
 [You can install in your Android](https://play.google.com/store/apps/details?id=com.coderwall.badges&feature=search_result)
 
