@@ -17,7 +17,7 @@ $('#btnsearch').live('click', function () {
 	    timeout: 10000,
 	    success: function (data) {	    	  	
 
-	        $.mobile.changePage($("#pagerest"), { transition: "slide"});
+	        $.mobile.changePage($("#pagerest"), { transition: "pop"});
 	        
 	        $('.wrapper').hide();
 	        $("#result").show();
