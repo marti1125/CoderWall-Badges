@@ -1,3 +1,12 @@
 .ui-page {
     -webkit-backface-visibility: hidden;
 }
+
+#centeror {
+	text-align: center;
+}
+
+.backinit {
+	width: 50%;
+	margin: 0 auto;
+}

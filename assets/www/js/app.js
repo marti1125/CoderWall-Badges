@@ -1,7 +1,13 @@
 $('#btnsearch').live('click', function () {
 
 	$("#result").hide();
-	$("#badges").html('');		
+	$("#badges").html('');
+	$("#result").html('');
+
+	$('#canvasloader-container').show();
+	$('#centeror').html('');
+
+	$.mobile.changePage('#dialog', 'pop', true, true);
 
 	var search = $("#search-basic").val();
 
@@ -9,7 +15,7 @@ $('#btnsearch').live('click', function () {
 	    url: 'https://coderwall.com/' + search + '.json?callback=?',
 	    dataType: "json",
 	    timeout: 10000,
-	    success: function (data) {	    	
+	    success: function (data) {	    	  	
 
 	        $.mobile.changePage($("#pagerest"), { transition: "slide"});
 	        
@@ -36,8 +42,14 @@ $('#btnsearch').live('click', function () {
 
 	        });
 	    },
-	    error: function (data) {	    	
-	        alert('Username does not found');
+	    error: function (data) {
+	    	$('#canvasloader-container').hide();	    	
+	    	$('#centeror').append('<h3>Username does not found</h3>');	    	
+	    	$('#centeror').append($('<a class="backinit" href="#container" />').text('Ok').buttonMarkup({
+			    theme  : 'a',			    
+			    mini   : false,
+			    inline : false
+			}));
 	    }
 	});  
 

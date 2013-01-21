@@ -14,10 +14,8 @@
 	<script src="js/heartcode-canvasloader.js"></script>
 	<script src="js/app.js"></script>
 	<script type="text/javascript">
-	$( document ).bind( "mobileinit", function() {
-    	//$.mobile.allowCrossDomainPages = true;
-    	$.mobile.defaultPageTransition = 'slide';    	
-    	//$.mobile.ajaxEnabled=true;
+	$( document ).bind( "mobileinit", function() {    	
+    	$.mobile.defaultPageTransition = 'slide';
 	});
 	</script>
 	<style type="text/css">
@@ -44,22 +42,33 @@
 	<div data-role="content">			
 		<label for="search-basic"><h2>Enter your username</h2></label>
 		<input type="search" name="search" id="search-basic" value="" />
-		<a rel="external" href="" data-transition="slide" data-role="button" id="btnsearch">Search</a>		
+		<a rel="external" href="" data-theme="a" data-transition="slide" data-role="button" id="btnsearch">Search</a>		
 	</div><!-- /content -->
 
 </div><!-- /page -->
 
+<div data-role="page" id="dialog">
+  <div data-role="header" data-position="fixed">
+    <h1>Looking...</h1>
+  </div>    
+  <div data-role="content" id="errormsg">
+  	<div id="canvasloader-container" class="wrapper"></div>
+  	<p id="centeror">	        	
+	</p> 
+  </div>    
+</div>
+
 <div data-role="page" id="pagerest">
 
 	<div data-role="header" data-position="fixed" data-tap-toggle="false" >
-		<a href="#pagerest" data-rel="back" data-transition="slide" >Back</a>
+		<a href="#container" data-transition="slide" >Back</a>
 		<h1>CoderWall</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content" data-iscroll class="iscroll-wrapper">
         <div class="iscroll-scroller">       
 	        <div class="iscroll-content">
-	        <div id="canvasloader-container" class="wrapper"></div>	        
+	        <div id="canvasloader-container" class="wrapper"></div>	             
 	        <div id="result"></div>
 			<br/><br/>				
 			<ul id="badges" data-role="listview" data-split-icon="gear" data-split-theme="a">
@@ -71,13 +80,13 @@
 </div><!-- /page -->
 
 <script type="text/javascript">
-     var cl = new CanvasLoader('canvasloader-container');
-     cl.show();
+	var cl = new CanvasLoader('canvasloader-container');
+    cl.show();
 
-     var loaderObj = document.getElementById("canvasLoader");
-     loaderObj.style.position = "absolute";
-     loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
-     loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
+    var loaderObj = document.getElementById("canvasLoader");
+    loaderObj.style.position = "absolute";
+    loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
+    loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
 </script>
 
 </body>
