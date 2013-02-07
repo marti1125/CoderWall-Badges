@@ -1,3 +1,83 @@
+body {
+	font-family: sans-serif;
+	background-color: #F5F5F5;
+	font-size: 16px;
+	color:  #303030;
+	margin: 0px !important;
+    padding: 0px !important;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+.title {
+	line-height: 30px;	
+}
+
+#header {
+	color: #fff;
+	height: 50px;	
+	background-image: linear-gradient(bottom, rgb(36,95,143) 19%, rgb(22,174,245) 82%);
+	background-image: -o-linear-gradient(bottom, rgb(36,95,143) 19%, rgb(22,174,245) 82%);
+	background-image: -moz-linear-gradient(bottom, rgb(36,95,143) 19%, rgb(22,174,245) 82%);
+	background-image: -webkit-linear-gradient(bottom, rgb(36,95,143) 19%, rgb(22,174,245) 82%);
+	background-image: -ms-linear-gradient(bottom, rgb(36,95,143) 19%, rgb(22,174,245) 82%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.19, rgb(36,95,143)),
+		color-stop(0.82, rgb(22,174,245))
+	)
+}
+
+#btnsearch, #back{	
+	width: 100%;
+  	height: 2.5rem;
+  	margin: 0 0 1rem;
+	padding: 0 1.5rem;
+	-moz-box-sizing: border-box;
+	display: inline-block;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	background-image: linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
+	background-image: -o-linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
+	background-image: -moz-linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
+	background-image: -webkit-linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
+	background-image: -ms-linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(123,126,128)),
+		color-stop(0.9, rgb(221,223,224))
+	);
+	border: 0.1rem solid #9f9f9f;
+	border-radius: 0.3rem;
+	font-size: 1.6rem;
+	font-family: 'Open Sans', Sans-serif;
+	font-weight: 600;
+	line-height: 1.3rem;
+	color: #333;
+	text-align: center;
+	text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+	text-decoration: none;
+	outline: none;
+}
+
+#backpage {
+	line-height: 5px !important;
+}
+
 .ui-page {
     -webkit-backface-visibility: hidden;
 }
@@ -9,4 +89,17 @@
 .backinit {
 	width: 50%;
 	margin: 0 auto;
+}
+
+#search {
+	width: 100%;
+  	height: 40px;
+  	display: block;
+  	overflow: hidden;
+  	resize: none;  	
+  	padding: 0 0.8rem;  
+  	border: 0.1rem solid rgba(0,0,0,.2);
+  	border-radius: 0.3rem;
+  	box-shadow: none;
+  	background: #fff;
 }

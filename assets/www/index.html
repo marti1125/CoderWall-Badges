@@ -3,7 +3,7 @@
 <head> 
 	<title>Badges</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.2.0.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.iscrollview.css" />
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
 	<script src="js/jquery-1.8.2.min.js"></script>
@@ -35,21 +35,21 @@
 
 <div data-role="page" id="container">
 
-	<div data-role="header" data-position="fixed" >
-		<h1>CoderWall</h1>
+	<div data-role="header" id="header" data-position="fixed" >
+		<h1 class="title">CoderWall</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">			
 		<label for="search-basic"><h2>Enter your username</h2></label>
-		<input type="search" name="search" id="search-basic" value="" />
-		<a rel="external" href="" data-theme="a" data-transition="pop" data-role="button" id="btnsearch">Search</a>		
+		<input type="text" id="search" />
+		<a href="#"  data-transition="pop" data-role="button" id="btnsearch">Search</a>		
 	</div><!-- /content -->
 
 </div><!-- /page -->
 
 <div data-role="page" id="dialog">
-  <div data-role="header" data-position="fixed">
-    <h1>Looking...</h1>
+  <div data-role="header" id="header" data-position="fixed">
+    <h1 class="title" >Looking...</h1>
   </div>    
   <div data-role="content" id="errormsg">
   	<div id="canvasloader-container" class="wrapper"></div>
@@ -60,8 +60,8 @@
 
 <div data-role="page" id="pagerest">
 
-	<div data-role="header" data-position="fixed" data-tap-toggle="false" >
-		<a href="#container" data-transition="pop" >Back</a>
+	<div data-role="header" id="header" data-position="fixed" data-tap-toggle="false" >
+		<a href="#container" data-transition="pop" id="backpage" ><img id="backpage" src="img/back.png"/></a>
 		<h1>CoderWall</h1>
 	</div><!-- /header -->
 	

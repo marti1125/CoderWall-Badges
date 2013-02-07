@@ -9,7 +9,7 @@ $('#btnsearch').live('click', function () {
 
 	$.mobile.changePage('#dialog', 'pop', true, true);
 
-	var search = $("#search-basic").val();
+	var search = $("#search").val();
 
 	$.ajax({
 	    url: 'https://coderwall.com/' + search + '.json?callback=?',
@@ -44,8 +44,8 @@ $('#btnsearch').live('click', function () {
 	    },
 	    error: function (data) {
 	    	$('#canvasloader-container').hide();	    	
-	    	$('#centeror').append('<h3>Username does not found</h3>');	    	
-	    	$('#centeror').append($('<a class="backinit" href="#container" />').text('Ok').buttonMarkup({
+	    	$('#centeror').append('<h2>Username does not found</h2>');	    	
+	    	$('#centeror').append($('<a class="backinit" id="back" href="#container" />').text('Ok').buttonMarkup({
 			    theme  : 'a',			    
 			    mini   : false,
 			    inline : false
