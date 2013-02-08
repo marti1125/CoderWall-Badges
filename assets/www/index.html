@@ -17,19 +17,7 @@
 	$( document ).bind( "mobileinit", function() {    	
     	$.mobile.defaultPageTransition = 'pop';
 	});
-	</script>
-	<style type="text/css">
-	#result {
-		background-color: #EAEAEA;
-		padding: 15px;
-		border-radius: 10px;
-	}
-	.wrapper {
-		position:absolute;
-		top:50%;
-		left:50%;
-	}
-	</style>
+	</script>	
 </head> 
 <body> 
 
@@ -42,7 +30,7 @@
 	<div data-role="content">			
 		<label for="search-basic"><h2>Enter your username</h2></label>
 		<input type="text" id="search" />
-		<a href="#"  data-transition="pop" data-role="button" id="btnsearch">Search</a>		
+		<a href="#" data-role="button" id="btnsearch">Search</a>		
 	</div><!-- /content -->
 
 </div><!-- /page -->
@@ -61,8 +49,8 @@
 <div data-role="page" id="pagerest">
 
 	<div data-role="header" id="header" data-position="fixed" data-tap-toggle="false" >
-		<a href="#container" data-transition="pop" id="backpage" ><img id="backpage" src="img/back.png"/></a>
-		<h1>CoderWall</h1>
+		<a href="#container" id="backpage" ><img id="backpage" src="img/back.png"/></a>
+		<h1 class="title" >CoderWall</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content" data-iscroll class="iscroll-wrapper">
@@ -71,7 +59,7 @@
 	        <div id="canvasloader-container" class="wrapper"></div>	             
 	        <div id="result"></div>
 			<br/><br/>				
-			<ul id="badges" data-role="listview" data-split-icon="gear" data-split-theme="a">
+			<ul id="badges" data-role="listview">
 			</ul>         
 	        </div>        
         </div>

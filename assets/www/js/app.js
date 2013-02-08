@@ -15,7 +15,9 @@ $('#btnsearch').live('click', function () {
 	    url: 'https://coderwall.com/' + search + '.json?callback=?',
 	    dataType: "json",
 	    timeout: 10000,
-	    success: function (data) {	    	  	
+	    success: function (data) {	
+
+	    	$("#search").val('');   	  	
 
 	        $.mobile.changePage($("#pagerest"), { transition: "pop"});
 	        
@@ -35,7 +37,7 @@ $('#btnsearch').live('click', function () {
 	                var badge_name = val2.name;
 	                var badge_desp = val2.description;
 	                var badge_img = val2.badge;
-	                $('#badges').append('<li><img src=' + badge_img + '/><h3 >' + badge_name + '</h3><p>' + badge_desp + '</p></li>');
+	                $('#badges').append('<li id=list><img class=imgb src=' + badge_img + '/><h3 >' + badge_name + '</h3><p class=rcontent >' + badge_desp + '</p></li>');
 	                $('#badges').listview('refresh');
 
 	            });
@@ -43,6 +45,7 @@ $('#btnsearch').live('click', function () {
 	        });
 	    },
 	    error: function (data) {
+	    	$("#search").val('');
 	    	$('#canvasloader-container').hide();	    	
 	    	$('#centeror').append('<h2>Username does not found</h2>');	    	
 	    	$('#centeror').append($('<a class="backinit" id="back" href="#container" />').text('Ok').buttonMarkup({

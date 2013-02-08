@@ -15,10 +15,6 @@ h3 {
 	font-size: 16px;
 }
 
-.title {
-	line-height: 30px;	
-}
-
 #header {
 	color: #fff;
 	height: 50px;	
@@ -53,7 +49,6 @@ h3 {
 	background-image: -moz-linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
 	background-image: -webkit-linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
 	background-image: -ms-linear-gradient(bottom, rgb(123,126,128) 0%, rgb(221,223,224) 90%);
-
 	background-image: -webkit-gradient(
 		linear,
 		left bottom,
@@ -78,17 +73,16 @@ h3 {
 	line-height: 5px !important;
 }
 
-.ui-page {
-    -webkit-backface-visibility: hidden;
-}
-
 #centeror {
 	text-align: center;
 }
 
-.backinit {
-	width: 50%;
-	margin: 0 auto;
+#list {
+	background-color: #EAEAEA;	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: solid #C0C0C0;	
+	height: 95px;
 }
 
 #search {
@@ -102,4 +96,37 @@ h3 {
   	border-radius: 0.3rem;
   	box-shadow: none;
   	background: #fff;
+}
+
+#result {
+	background-color: #EAEAEA;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.wrapper {
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+
+.backinit {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+
+.title {
+	line-height: 30px;	
+}
+
+.rcontent {	
+	white-space: pre-wrap;
+}
+
+.imgb {
+	padding-top: 9px;
 }
