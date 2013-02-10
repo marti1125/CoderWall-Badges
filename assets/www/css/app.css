@@ -39,6 +39,7 @@ h3 {
   	margin: 0 0 1rem;
 	padding: 0 1.5rem;
 	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	display: inline-block;
 	vertical-align: middle;
 	text-overflow: ellipsis;
