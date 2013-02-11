@@ -1,4 +1,4 @@
-# CoderWall Badges Viewer v1.4
+# CoderWall Badges Viewer v1.5
 
 * Author: Willy Aguirre
 * Email: marti1125@gmail.com
